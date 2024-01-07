@@ -1,0 +1,197 @@
+:root{
+    --tempBorder:2px solid green;
+    --hideBorder:none;
+    --tempBG: red;
+    --tempBG1: rgb(47, 0, 255);
+    --insetShadow:0 0 14px black;
+    --round:100%;
+    --smooth:15px;
+    /* --spBG: linear-gradient(135deg,pink,purple ,blue,lightblue); */
+     --spBG: linear-gradient(135deg,rgb(13, 222, 241),rgb(11, 149, 187) ,rgb(0, 51, 255),rgb(2, 17, 130));
+    --spBGrev: linear-gradient(315deg,rgb(13, 222, 241),rgb(11, 149, 187) ,rgb(0, 51, 255),rgb(2, 17, 130));
+
+}
+*{ 
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    max-width: 100vw;
+    min-height: 100vh;
+    /* background: #000; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+}
+
+h4{
+    line-height: 16px;
+    color: white;
+}
+.upper-nav{
+
+    height: 10vh;
+    width: 95vw;
+    padding: 0 4%;
+    background-image: url(mikly-way.jpeg);
+    background-position-y:330px;
+    
+    position: relative;
+    top:4px;
+    margin: auto;
+    border-radius: 15vh;
+    border: var(--tempBorder);
+    display: flex;
+    align-items: center;  
+}
+
+
+
+.pad{
+
+    height: 87vh;
+    width: 95vw;
+    margin: 10px auto ;
+    border-radius: 5px;
+    border: none;
+    box-shadow: inset 0 0 8px black;
+    
+    overflow-y:scroll; 
+    display: flex;
+    flex-wrap: wrap;
+}
+.pad::-webkit-scrollbar{
+    display: none;
+}
+
+.add{
+    z-index: 12;
+    height: 10vh;
+    aspect-ratio: 1/1;
+    border-radius: var(--round);
+    background: var(--spBG);
+    color: #fff;
+    font-size: 30px;
+    position:absolute ;
+    border: none;
+    top: 85vh;
+    right: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgb(235, 252, 4);
+}
+.add:hover{
+    background: var(--spBGrev);
+    color: #fafe07;
+    box-shadow: 0 0 10px rgba(2, 2, 2, 0.564);
+}
+
+.Space-Note{
+    display: block;
+    height: 20vh;
+    aspect-ratio: 3/4;
+   background-color: red;
+    margin: 10px;
+    border-radius: 25px 5px;
+    resize: none;
+    box-shadow: var(--insetShadow);
+}
+
+#delete{
+    margin-left: 4%;
+}
+#delete:hover{
+    color:red
+}
+#tools{
+    cursor: pointer;
+    padding: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    border-radius: 25px 5px 0 0;
+    background-color: black;
+    color: #fff;
+}
+#ct{
+    
+    font-size: 120%;
+    color:yellow;
+}
+#content{
+    padding: 4%;
+    height: 80%;
+    width: 100%;
+    border-radius: 0 0 25px 5px ;
+    color: #030303;
+}
+#contact{
+    position: absolute;
+    bottom:0px;
+    font-size: 10px;
+}
+
+
+@media screen and (min-width:431px){
+    header{
+      
+       
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 10%;
+    }
+    h4{  margin:10%;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 1 px;
+        font-size: 60px;}
+    .upper-nav{
+
+        height: 10vh;
+        width: 95vw;
+        /* padding:; */
+        background-image: url(mikly-way.jpeg);
+        background-position-y: 10px;
+        position: relative;
+        top:4px;
+        margin: auto;
+       
+        border: var(--tempBorder);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Space-Note{
+        display: block;
+        height: 30vh;
+        aspect-ratio: 3/4;
+      
+        margin: 10px;
+       
+        resize: none;
+
+    }
+    .Space-Note:hover{
+   box-shadow: 0 0 8px blue
+    }
+
+
+}
